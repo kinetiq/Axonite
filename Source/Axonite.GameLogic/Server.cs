@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Axonite.API.Actions;
 using Axonite.API.World;
 using Axonite.GameLogic.Loaders;
 using Axonite.GameLogic.Turns;
@@ -14,22 +15,30 @@ namespace Axonite.GameLogic
 {
     public class Server
     {
-
         private GameStates GameState = GameStates.GameNotStarted;
         private MatchTypes MatchType = MatchTypes.NotSet;
         private List<IHero> Heroes = null;
         
-        public Server()
-        {
-
-        }
-
         public void StartGame(MatchTypes matchType)
         {
             if (GameState != GameStates.GameNotStarted)
                 throw new InvalidOperationException();
 
-            Heroes = HeroLoader.LoadHeroes(matchType);
+            var LoadOutcome = HeroLoader.LoadHeroes(matchType);
+            
+            if (!LoadOutcome.Success)
+                throw new InvalidOperationException("Failure filtering valid heroes: " + LoadOutcome);
+
+            if (LoadOutcome.Messages.Count > 0)
+            {
+                //Show messages?
+            }
+
+            Heroes = LoadOutcome.Value;
+
+            //Arrange the game map
+            //Arrange the heroes in space
+
             MatchType = matchType;
             GameState = GameStates.GameOn;
         }
@@ -42,14 +51,22 @@ namespace Axonite.GameLogic
             foreach (var Hero in Heroes)
                 ExecuteTurn(Hero);
 
+            //Check victory condititons
             GameState = GameStates.GameOver;
         }
 
         private void ExecuteTurn(IHero hero)
         {
-            //...Action   = Hero.DetermineAction
-            //...Governor.ValidateAction(Action) 
-            //...Execute.Action or Action.Pass
+            var Action = hero.DetermineAction();
+            var Outcome = ActionValidator.ValidateAction(hero, Action);
+
+            if (!Outcome.Success)
+            {
+                Action = new PassAction();
+                //Show message?
+            }
+
+            ActionExecutor.Execute(hero, Action);
         }
     }
 }

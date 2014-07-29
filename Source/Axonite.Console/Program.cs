@@ -1,9 +1,17 @@
-﻿namespace Axionite.Console
+﻿using Axonite.GameLogic;
+using Axonite.GameLogic.Turns;
+
+namespace Axionite.Console
 {
     class Program
     {
         static void Main(string[] args)
         {
+            var Server = new Server();
+            Server.StartGame(MatchTypes.DeathMatch);
+            Server.ExecuteTurn();
+
+
             //var z = new Axonite.GameLogic.Loaders.HeroLoader();
             //z.LoadBotsFromAssemblies();
 

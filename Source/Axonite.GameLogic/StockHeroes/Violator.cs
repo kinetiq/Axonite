@@ -1,4 +1,5 @@
 ﻿using System;
+using Axonite.API.Actions;
 using Axonite.API.World;
 
 namespace Axonite.GameLogic.StockHeroes
@@ -8,6 +9,11 @@ namespace Axonite.GameLogic.StockHeroes
         public void Setup()
         {
             throw new NotImplementedException();
+        }
+
+        public IAction DetermineAction()
+        {
+            return new PassAction();
         }
     }
 }

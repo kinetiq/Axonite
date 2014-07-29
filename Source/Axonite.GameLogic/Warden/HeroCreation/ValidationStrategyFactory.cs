@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Axonite.GameLogic.Turns;
 
-namespace Axonite.GameLogic.Warden.Validation
+namespace Axonite.GameLogic.Warden.HeroCreation
 {
     static class ValidationStrategyFactory
     {
@@ -15,7 +10,7 @@ namespace Axonite.GameLogic.Warden.Validation
             switch (matchType)
             {
                 case MatchTypes.DeathMatch:
-                    return new DeathMatchHeroValidator();
+                    return new DeathMatchValidator();
                 default:
                     throw new InvalidOperationException("Unexpected MatchType: " + matchType);
             }

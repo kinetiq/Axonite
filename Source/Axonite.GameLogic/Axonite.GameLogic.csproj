@@ -51,17 +51,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Loaders\HeroImporter.cs" />
     <Compile Include="Loaders\HeroLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Server.cs" />
     <Compile Include="StockHeroes\Sven.cs" />
     <Compile Include="StockHeroes\Violator.cs" />
+    <Compile Include="Turns\ActionExecutor.cs" />
     <Compile Include="Turns\MatchTypes.cs" />
     <Compile Include="Turns\GameStates.cs" />
+    <Compile Include="Warden\ActionValidator.cs" />
     <Compile Include="Warden\HeroValidator.cs" />
-    <Compile Include="Warden\Validation\DeathMatchHeroValidator.cs" />
-    <Compile Include="Warden\Validation\IValidationStrategy.cs" />
-    <Compile Include="Warden\Validation\ValidationStrategyFactory.cs" />
+    <Compile Include="Warden\HeroCreation\DeathMatchValidator.cs" />
+    <Compile Include="Warden\HeroCreation\IValidationStrategy.cs" />
+    <Compile Include="Warden\HeroCreation\ValidationStrategyFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Axonite.API\Axonite.API.csproj">

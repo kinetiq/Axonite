@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Axonite.API.World;
 using Axonite.GameLogic.Turns;
-using Axonite.GameLogic.Warden.Validation;
+using Axonite.GameLogic.Warden.HeroCreation;
 using Ether.Outcomes;
 
 namespace Axonite.GameLogic.Warden

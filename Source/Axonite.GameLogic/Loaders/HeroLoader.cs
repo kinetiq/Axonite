@@ -6,27 +6,20 @@ using System.Threading.Tasks;
 using Axonite.API.World;
 using Axonite.GameLogic.Turns;
 using Axonite.GameLogic.Warden;
+using Ether.Outcomes;
 
 namespace Axonite.GameLogic.Loaders
 {
     class HeroLoader
     {
-        public static List<IHero> LoadHeroes(MatchTypes matchType)
+        public static IOutcome<List<IHero>> LoadHeroes(MatchTypes matchType)
         {
             var AllHeroes = HeroImporter.ImportHeroesFromAssemblies();
 
             var Validator = new HeroValidator(AllHeroes, matchType);
             var ValidHeroesOutcome = Validator.GetValidHeroes();
 
-            if (!ValidHeroesOutcome.Success)
-                throw new InvalidOperationException("Failure filtering valid heroes: " + ValidHeroesOutcome);
-
-            if (ValidHeroesOutcome.Messages.Count > 0)
-            {
-                //Show messages?
-            }
-
-            return ValidHeroesOutcome.Value;
+            return ValidHeroesOutcome;
         }
     }
 }

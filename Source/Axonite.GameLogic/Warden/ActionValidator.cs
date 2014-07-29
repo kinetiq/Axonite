@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Axonite.API.Actions;
 using Axonite.API.World;
 using Ether.Outcomes;
 
-namespace Axonite.GameLogic.Warden.Validation
+namespace Axonite.GameLogic.Warden
 {
-    class DeathMatchHeroValidator : IValidationStrategy
+    public class ActionValidator
     {
-        public IOutcome Validate(IHero hero)
+        public static IOutcome ValidateAction(IHero hero, IAction action)
         {
             return Outcomes.Success();
         }
