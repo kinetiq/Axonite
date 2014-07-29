@@ -13,12 +13,23 @@ using Axonite.API.World;
 
 namespace Axonite.GameLogic.Loaders
 {
-    public class BotLoader
+    public class HeroImporter
     {
-        [ImportMany(typeof(ICreature))]
-        private List<ICreature> Creatures;
+        [ImportMany(typeof(IHero))]
+        private List<IHero> Heroes;
 
-        public List<ICreature> LoadBotsFromAssemblies()
+        private HeroImporter()
+        {
+            //Private constructor; using factory method pattern.
+        }
+
+        public static List<IHero> ImportHeroesFromAssemblies()
+        {
+            var Loader = new HeroImporter();
+            return Loader.ImportHeroes();
+        }
+
+        private List<IHero> ImportHeroes()
         {
             var Catalog = new AggregateCatalog(); //We can add multiple catalogs to this. 
 
@@ -26,9 +37,9 @@ namespace Axonite.GameLogic.Loaders
             Catalog.Catalogs.Add(GetExecutionDirectoryCatalog()); 
 
             var Container = new CompositionContainer(Catalog);
-            Container.ComposeParts(this); //After this, Creatures will contain instances of all our StockBots!
+            Container.ComposeParts(this); //After this, Heroes will contain instances of all our StockBots!
 
-            return new List<ICreature>(Creatures); //Copy the list.
+            return new List<IHero>(Heroes); //Copy the list.
         }
 
         private DirectoryCatalog GetExecutionDirectoryCatalog()
@@ -36,9 +47,9 @@ namespace Axonite.GameLogic.Loaders
             //This registration makes it easier to implement new bots, because you won't have to put in the [Export(...)] attribute.
             var Registration = new RegistrationBuilder();
 
-            Registration.ForTypesDerivedFrom<ICreature>()
-                        .Export<ICreature>();
-
+            Registration
+                .ForTypesDerivedFrom<IHero>()
+                .Export<IHero>();
 
             var ExecutionPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             return new DirectoryCatalog(ExecutionPath, Registration);          

@@ -1,6 +1,6 @@
 ﻿namespace Axonite.API.World
 {
-    public interface ICreature
+    public interface IHero
     {
         void Setup();
     }

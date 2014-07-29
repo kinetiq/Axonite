@@ -36,6 +36,9 @@
     <Reference Include="Ether.WeightedSelector">
       <HintPath>..\packages\Ether.WeightedSelector.1.1.1\lib\Ether.WeightedSelector.dll</HintPath>
     </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.Composition.Registration" />
@@ -48,14 +51,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Loaders\BotLoader.cs" />
+    <Compile Include="Loaders\HeroLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Server.cs" />
-    <Compile Include="StockBots\BasicBot.cs" />
-    <Compile Include="StockBots\OtherBot.cs" />
+    <Compile Include="StockHeroes\Sven.cs" />
+    <Compile Include="StockHeroes\Violator.cs" />
     <Compile Include="Turns\MatchTypes.cs" />
     <Compile Include="Turns\GameStates.cs" />
-    <Compile Include="Warden\BotValidator.cs" />
+    <Compile Include="Warden\HeroValidator.cs" />
+    <Compile Include="Warden\Validation\DeathMatchHeroValidator.cs" />
+    <Compile Include="Warden\Validation\IValidationStrategy.cs" />
+    <Compile Include="Warden\Validation\ValidationStrategyFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Axonite.API\Axonite.API.csproj">

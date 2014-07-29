@@ -35,6 +35,9 @@
     <Reference Include="Ether.Outcomes">
       <HintPath>..\packages\Ether.Outcomes.1.0.3\lib\Ether.Outcomes.dll</HintPath>
     </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

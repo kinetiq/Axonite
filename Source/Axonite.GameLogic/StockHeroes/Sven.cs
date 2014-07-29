@@ -1,11 +1,10 @@
 ﻿using System;
-using System.ComponentModel.Composition;
 using Axonite.API.World;
 
-namespace Axonite.GameLogic.StockBots
+namespace Axonite.GameLogic.StockHeroes
 {
 
-    public class OtherBot : ICreature
+    public class Sven : IHero
     {
         public void Setup()
         {
