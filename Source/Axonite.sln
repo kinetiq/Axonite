@@ -4,8 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Axonite.Console", "Axonite.Console\Axonite.Console.csproj", "{692D607E-828E-4186-B416-157D30EA42EE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Axonite.Core", "Axonite.Core\Axonite.Core.csproj", "{44FDED6A-0543-40E1-AD07-6239AF0BA927}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AABA98B9-DC23-474E-A20D-EA994D2486B3} = {AABA98B9-DC23-474E-A20D-EA994D2486B3}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Axonite.API", "Axonite.API\Axonite.API.csproj", "{AABA98B9-DC23-474E-A20D-EA994D2486B3}"
 EndProject
@@ -21,10 +22,6 @@ Global
 		{692D607E-828E-4186-B416-157D30EA42EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{692D607E-828E-4186-B416-157D30EA42EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{692D607E-828E-4186-B416-157D30EA42EE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{44FDED6A-0543-40E1-AD07-6239AF0BA927}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{44FDED6A-0543-40E1-AD07-6239AF0BA927}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{44FDED6A-0543-40E1-AD07-6239AF0BA927}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{44FDED6A-0543-40E1-AD07-6239AF0BA927}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AABA98B9-DC23-474E-A20D-EA994D2486B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AABA98B9-DC23-474E-A20D-EA994D2486B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AABA98B9-DC23-474E-A20D-EA994D2486B3}.Release|Any CPU.ActiveCfg = Release|Any CPU

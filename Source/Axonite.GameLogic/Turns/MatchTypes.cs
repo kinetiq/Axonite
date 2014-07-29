@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Axonite.Core.World
+namespace Axonite.GameLogic.Turns
 {
-    public interface ICreature
+    public enum MatchTypes
     {
-        //Details to follow.
+        NotSet,
+        DeathMatch
     }
 }

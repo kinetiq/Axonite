@@ -30,8 +30,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Ether.Outcomes">
+      <HintPath>..\packages\Ether.Outcomes.1.0.3\lib\Ether.Outcomes.dll</HintPath>
+    </Reference>
+    <Reference Include="Ether.WeightedSelector">
+      <HintPath>..\packages\Ether.WeightedSelector.1.1.1\lib\Ether.WeightedSelector.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.Composition.Registration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Reflection.Context" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -39,18 +48,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Loaders\BotLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Server.cs" />
+    <Compile Include="StockBots\BasicBot.cs" />
+    <Compile Include="StockBots\OtherBot.cs" />
+    <Compile Include="Turns\MatchTypes.cs" />
+    <Compile Include="Turns\GameStates.cs" />
+    <Compile Include="Warden\BotValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Axonite.API\Axonite.API.csproj">
       <Project>{aaba98b9-dc23-474e-a20d-ea994d2486b3}</Project>
       <Name>Axonite.API</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Axonite.Core\Axonite.Core.csproj">
-      <Project>{44fded6a-0543-40e1-ad07-6239af0ba927}</Project>
-      <Name>Axonite.Core</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

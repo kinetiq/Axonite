@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Axonite.Core.Actions
+namespace Axonite.GameLogic.Warden
 {
-    public interface IAction
+    class BotValidator
     {
-        //Details to follow.
     }
 }
