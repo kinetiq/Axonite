@@ -1,4 +1,4 @@
-﻿namespace Axonite.API.Actions
+﻿namespace Axonite.Core.Actions
 {
     public interface IAction
     {

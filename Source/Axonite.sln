@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Axonite.API", "Axonite.API\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Axonite.GameLogic", "Axonite.GameLogic\Axonite.GameLogic.csproj", "{93E836F1-D50B-47C7-9ADE-3638A64F5395}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Axonite.Core", "Axonite.Core\Axonite.Core.csproj", "{DD3370CF-27BF-45B9-AE5C-F5636EE6EEE2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 		{93E836F1-D50B-47C7-9ADE-3638A64F5395}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93E836F1-D50B-47C7-9ADE-3638A64F5395}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93E836F1-D50B-47C7-9ADE-3638A64F5395}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD3370CF-27BF-45B9-AE5C-F5636EE6EEE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD3370CF-27BF-45B9-AE5C-F5636EE6EEE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD3370CF-27BF-45B9-AE5C-F5636EE6EEE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD3370CF-27BF-45B9-AE5C-F5636EE6EEE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

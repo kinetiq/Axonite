@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameState.cs" />
     <Compile Include="Loaders\HeroImporter.cs" />
     <Compile Include="Loaders\HeroLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,9 +72,16 @@
       <Project>{aaba98b9-dc23-474e-a20d-ea994d2486b3}</Project>
       <Name>Axonite.API</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Axonite.Core\Axonite.Core.csproj">
+      <Project>{dd3370cf-27bf-45b9-ae5c-f5636ee6eee2}</Project>
+      <Name>Axonite.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="World\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -9,7 +9,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using Axonite.API.World;
+using Axonite.Core.World;
 
 namespace Axonite.GameLogic.Loaders
 {

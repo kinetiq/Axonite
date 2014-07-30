@@ -1,4 +1,4 @@
-﻿using Axonite.API.World;
+﻿using Axonite.Core.World;
 using Ether.Outcomes;
 
 namespace Axonite.GameLogic.Warden.HeroCreation

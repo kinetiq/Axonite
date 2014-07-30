@@ -1,6 +1,7 @@
 ﻿using System;
 using Axonite.API.Actions;
-using Axonite.API.World;
+using Axonite.Core.Actions;
+using Axonite.Core.World;
 
 namespace Axonite.GameLogic.StockHeroes
 {

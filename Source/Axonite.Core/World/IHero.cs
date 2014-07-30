@@ -1,6 +1,6 @@
-﻿using Axonite.API.Actions;
+﻿using Axonite.Core.Actions;
 
-namespace Axonite.API.World
+namespace Axonite.Core.World
 {
     public interface IHero
     {
