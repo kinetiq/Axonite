@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
 using System.ComponentModel.Composition.Registration;
-using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using Axonite.Core.World;
 
-namespace Axonite.GameLogic.Loaders
+namespace Axonite.GameLogic.ServerLogic.Loaders
 {
     public class HeroImporter
     {

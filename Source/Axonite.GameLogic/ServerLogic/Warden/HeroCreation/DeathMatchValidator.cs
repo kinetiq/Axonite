@@ -1,7 +1,7 @@
 ﻿using Axonite.Core.World;
 using Ether.Outcomes;
 
-namespace Axonite.GameLogic.Warden.HeroCreation
+namespace Axonite.GameLogic.ServerLogic.Warden.HeroCreation
 {
     class DeathMatchValidator : IValidationStrategy
     {

@@ -34,3 +34,7 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+
+// Internals are visible to GameLogic and API, that way we can hide things from the hero libraries.
+[assembly: InternalsVisibleTo("Axonite.GameLogic")]
+[assembly: InternalsVisibleTo("Axonite.API")]

@@ -1,5 +1,5 @@
 ﻿using Axonite.GameLogic;
-using Axonite.GameLogic.Turns;
+using Axonite.GameLogic.ServerLogic.Turns;
 
 namespace Axionite.Console
 {
@@ -8,7 +8,7 @@ namespace Axionite.Console
         static void Main(string[] args)
         {
             var Server = new Server();
-            Server.StartGame(MatchTypes.DeathMatch);
+            Server.StartGame(GameTypes.DeathMatch);
             Server.ExecuteTurn();
 
 

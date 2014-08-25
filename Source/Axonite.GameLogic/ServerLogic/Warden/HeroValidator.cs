@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Axonite.Core.World;
-using Axonite.GameLogic.Turns;
-using Axonite.GameLogic.Warden.HeroCreation;
+using Axonite.GameLogic.ServerLogic.Turns;
+using Axonite.GameLogic.ServerLogic.Warden.HeroCreation;
 using Ether.Outcomes;
 
-namespace Axonite.GameLogic.Warden
+namespace Axonite.GameLogic.ServerLogic.Warden
 {
     /// <summary>
     /// Validates heroes to ensure fair stats.
@@ -17,13 +13,13 @@ namespace Axonite.GameLogic.Warden
     {
         private readonly List<IHero> Heroes;
         private readonly IValidationStrategy Validator;
-        private readonly MatchTypes MatchType;
+        private readonly GameTypes GameType;
        
-        public HeroValidator(List<IHero> heroes, MatchTypes matchType)
+        public HeroValidator(List<IHero> heroes, GameTypes gameType)
         {
             this.Heroes = heroes;
-            this.MatchType = matchType;
-            this.Validator = ValidationStrategyFactory.GetValidatorFor(MatchType);
+            this.GameType = gameType;
+            this.Validator = ValidationStrategyFactory.GetValidatorFor(GameType);
         }
 
         public IOutcome<List<IHero>> GetValidHeroes()

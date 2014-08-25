@@ -49,10 +49,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actions\PassAction.cs" />
+    <Compile Include="Creation\Stats.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Creation\" />
     <Folder Include="Evaluation\" />
   </ItemGroup>
   <ItemGroup>

@@ -42,6 +42,7 @@
     <Compile Include="Actions\IAction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="World\HeroState.cs" />
+    <Compile Include="HeroStateService.cs" />
     <Compile Include="World\IHero.cs" />
   </ItemGroup>
   <ItemGroup>

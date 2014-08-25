@@ -1,5 +1,7 @@
 ﻿using System;
+using System.ComponentModel.Composition;
 using Axonite.API.Actions;
+using Axonite.API.Creation;
 using Axonite.Core.Actions;
 using Axonite.Core.World;
 
@@ -10,7 +12,7 @@ namespace Axonite.GameLogic.StockHeroes
     {
         public void Setup()
         {
-            throw new NotImplementedException();
+            Stats.SetHealth(this, 5);
         }
 
         public IAction DetermineAction()
