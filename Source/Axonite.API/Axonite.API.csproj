@@ -48,13 +48,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actions\AttackAction.cs" />
     <Compile Include="Actions\PassAction.cs" />
     <Compile Include="Creation\Stats.cs" />
+    <Compile Include="Evaluation.cs" />
+    <Compile Include="Eval\Look.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Evaluation\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
