@@ -12,7 +12,8 @@ namespace Axonite.GameLogic.StockHeroes
     {
         public void Setup()
         {
-            Stats.SetHealth(this, 5);
+            Stats.SetHealth(this, 3);
+            Stats.SetStrength(this, 7);
         }
 
         public IAction DetermineAction()

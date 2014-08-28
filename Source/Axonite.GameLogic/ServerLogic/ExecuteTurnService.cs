@@ -8,7 +8,7 @@ namespace Axonite.GameLogic.ServerLogic
 {
     internal class ExecuteTurnService
     {
-        internal static void ExecuteTurn()
+        internal static TurnResults ExecuteTurn()
         {
             if (Game.GameState != GameStates.GameOn)
                 throw new InvalidOperationException();
@@ -18,6 +18,7 @@ namespace Axonite.GameLogic.ServerLogic
 
             //Check victory condititons
             Game.GameState = GameStates.GameOver;
+            return TurnResults.GameOver;
         }
 
         private static void ExecuteTurn(IHero hero)

@@ -15,5 +15,11 @@ namespace Axonite.API.Creation
             var HeroState = HeroStateService.Find(hero);
             HeroState.Health = value;
         }
+
+        public static void SetStrength(IHero hero, int value)
+        {
+            var HeroState = HeroStateService.Find(hero);
+            HeroState.Strength = value;
+        }
     }
 }

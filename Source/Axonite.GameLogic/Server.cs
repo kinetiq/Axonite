@@ -15,7 +15,7 @@ namespace Axonite.GameLogic
 
         public void ExecuteTurn()
         {
-            ExecuteTurnService.ExecuteTurn();
+            var Result = ExecuteTurnService.ExecuteTurn();
         }
     }
 }

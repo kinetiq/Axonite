@@ -7,7 +7,7 @@ using Axonite.Core.Actions;
 
 namespace Axonite.API.Actions
 {
-    public class AttackAction : IAction
+    public class PassAction : IAction
     {
     }
 }
