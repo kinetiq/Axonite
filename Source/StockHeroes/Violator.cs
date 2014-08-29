@@ -1,10 +1,9 @@
-﻿using System;
-using Axonite.API.Actions;
+﻿using Axonite.API.Actions;
 using Axonite.API.Creation;
 using Axonite.Core.Actions;
 using Axonite.Core.World;
 
-namespace Axonite.GameLogic.StockHeroes
+namespace StockHeroes
 {
     public class Violator : IHero
     {

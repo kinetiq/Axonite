@@ -42,10 +42,12 @@
     <Compile Include="Actions\IAction.cs" />
     <Compile Include="HeroStateService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Singletons\GameMapSingleton.cs" />
+    <Compile Include="Singletons\HeroStateDictionarySingleton.cs" />
     <Compile Include="World\HeroState.cs" />
     <Compile Include="MapService.cs" />
     <Compile Include="World\IHero.cs" />
-    <Compile Include="World\Map.cs" />
+    <Compile Include="World\GameMap.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="World\Attributes\" />

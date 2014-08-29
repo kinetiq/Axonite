@@ -40,14 +40,14 @@ namespace Axonite.GameLogic.ServerLogic.Loaders
         private DirectoryCatalog GetExecutionDirectoryCatalog()
         {
             //This registration makes it easier to implement new bots, because you won't have to put in the [Export(...)] attribute.
-            var registration = new RegistrationBuilder();
+            var Registration = new RegistrationBuilder();
 
-            registration
+            Registration
                 .ForTypesDerivedFrom<IHero>()
                 .Export<IHero>();
 
-            var executionPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            return new DirectoryCatalog(executionPath, registration);          
+            var ExecutionPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            return new DirectoryCatalog(ExecutionPath, Registration);          
         }
     }
 }

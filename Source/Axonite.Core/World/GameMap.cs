@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Axonite.Core.World
 {
-    public class Map
+    public class GameMap
     {
         //For now, just assuming a single location...
         internal List<HeroState> m_HeroList = new List<HeroState>();

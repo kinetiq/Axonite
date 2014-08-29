@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{692D607E-828E-4186-B416-157D30EA42EE}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{0E0B8473-BFF2-41F9-BA99-44C9D093354C}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Axionite.Console</RootNamespace>
-    <AssemblyName>Axionite.Console</AssemblyName>
+    <RootNamespace>StockHeroes</RootNamespace>
+    <AssemblyName>StockHeroes</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,12 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Ether.Outcomes">
-      <HintPath>..\packages\Ether.Outcomes.1.0.3\lib\Ether.Outcomes.dll</HintPath>
-    </Reference>
-    <Reference Include="Ninject">
-      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,21 +39,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sven.cs" />
+    <Compile Include="Violator.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Axonite.GameLogic\Axonite.GameLogic.csproj">
-      <Project>{93e836f1-d50b-47c7-9ade-3638a64f5395}</Project>
-      <Name>Axonite.GameLogic</Name>
+    <ProjectReference Include="..\Axonite.API\Axonite.API.csproj">
+      <Project>{aaba98b9-dc23-474e-a20d-ea994d2486b3}</Project>
+      <Name>Axonite.API</Name>
     </ProjectReference>
-    <ProjectReference Include="..\StockHeroes\StockHeroes.csproj">
-      <Project>{0e0b8473-bff2-41f9-ba99-44c9d093354c}</Project>
-      <Name>StockHeroes</Name>
+    <ProjectReference Include="..\Axonite.Core\Axonite.Core.csproj">
+      <Project>{dd3370cf-27bf-45b9-ae5c-f5636ee6eee2}</Project>
+      <Name>Axonite.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

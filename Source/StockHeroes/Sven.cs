@@ -1,13 +1,10 @@
-﻿using System;
-using System.ComponentModel.Composition;
-using Axonite.API.Actions;
+﻿using Axonite.API.Actions;
 using Axonite.API.Creation;
 using Axonite.Core.Actions;
 using Axonite.Core.World;
 
-namespace Axonite.GameLogic.StockHeroes
+namespace StockHeroes
 {
-
     public class Sven : IHero
     {
         public void Setup()

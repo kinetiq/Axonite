@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Axonite.Core.Singletons;
 using Axonite.Core.World;
 
 namespace Axonite.Core
@@ -10,21 +11,21 @@ namespace Axonite.Core
     /// </summary>
     internal static class MapService
     {
-        private static readonly Map MapState = new Map();
+        private static readonly GameMap GameMapState = GameMapSingleton.Instance.Map;
 
         public static void Add(HeroState hero)
         {
-            MapState.m_HeroList.Add(hero);
+            GameMapState.m_HeroList.Add(hero);
         }
 
         internal static IReadOnlyCollection<HeroState> GetHeroes()
         {
-            return MapState.HeroList();
+            return GameMapState.HeroList();
         }
 
         internal static void Remove(HeroState hero)
         {
-            MapState.m_HeroList.Remove(hero);
+            GameMapState.m_HeroList.Remove(hero);
         }
     }
 }

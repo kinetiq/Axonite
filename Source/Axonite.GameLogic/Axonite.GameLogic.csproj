@@ -52,7 +52,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Game.cs" />
-    <Compile Include="ServerLogic\HeroStateService.cs" />
     <Compile Include="ServerLogic\Loaders\HeroImporter.cs" />
     <Compile Include="ServerLogic\Loaders\HeroLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -60,8 +59,6 @@
     <Compile Include="ServerLogic\ExecuteTurnService.cs" />
     <Compile Include="ServerLogic\StartGameService.cs" />
     <Compile Include="ServerLogic\Turns\TurnResults.cs" />
-    <Compile Include="StockHeroes\Sven.cs" />
-    <Compile Include="StockHeroes\Violator.cs" />
     <Compile Include="ServerLogic\Turns\ActionExecutor.cs" />
     <Compile Include="ServerLogic\Turns\GameTypes.cs" />
     <Compile Include="ServerLogic\Turns\GameStates.cs" />

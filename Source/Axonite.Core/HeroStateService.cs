@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Axonite.Core.Singletons;
 using Axonite.Core.World;
 
 namespace Axonite.Core
@@ -11,7 +12,7 @@ namespace Axonite.Core
     /// </summary>
     internal static class HeroStateService
     {
-        private static readonly Dictionary<IHero, HeroState> HeroStateDictionary = new Dictionary<IHero, HeroState>();
+        private static readonly Dictionary<IHero, HeroState> HeroStateDictionary = HeroStateDictionarySingleton.Instance.HeroStateDictionary;
 
         public static void RegisterAndInitializeState(IHero hero)
         {
