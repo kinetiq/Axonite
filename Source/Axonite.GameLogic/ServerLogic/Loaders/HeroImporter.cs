@@ -10,8 +10,8 @@ namespace Axonite.GameLogic.ServerLogic.Loaders
 {
     public class HeroImporter
     {
-        [ImportMany(typeof(IHero))]
-        private List<IHero> Heroes;
+        [ImportMany(typeof (IHero))] 
+        private List<IHero> m_Heroes = null;
 
         private HeroImporter()
         {
@@ -20,34 +20,34 @@ namespace Axonite.GameLogic.ServerLogic.Loaders
 
         public static List<IHero> ImportHeroesFromAssemblies()
         {
-            var Loader = new HeroImporter();
-            return Loader.ImportHeroes();
+            var loader = new HeroImporter();
+            return loader.ImportHeroes();
         }
 
         private List<IHero> ImportHeroes()
         {
-            var Catalog = new AggregateCatalog(); //We can add multiple catalogs to this. 
+            var catalog = new AggregateCatalog(); //We can add multiple catalogs to this. 
 
             //Rifle through all the catalogs in the exectuing folder, and pull the ones that implement our interface.
-            Catalog.Catalogs.Add(GetExecutionDirectoryCatalog()); 
+            catalog.Catalogs.Add(GetExecutionDirectoryCatalog()); 
 
-            var Container = new CompositionContainer(Catalog);
-            Container.ComposeParts(this); //After this, Heroes will contain instances of all our StockBots!
+            var container = new CompositionContainer(catalog);
+            container.ComposeParts(this); //After this, Heroes will contain instances of all our StockBots!
 
-            return new List<IHero>(Heroes); //Copy the list.
+            return new List<IHero>(m_Heroes); //Copy the list.
         }
 
         private DirectoryCatalog GetExecutionDirectoryCatalog()
         {
             //This registration makes it easier to implement new bots, because you won't have to put in the [Export(...)] attribute.
-            var Registration = new RegistrationBuilder();
+            var registration = new RegistrationBuilder();
 
-            Registration
+            registration
                 .ForTypesDerivedFrom<IHero>()
                 .Export<IHero>();
 
-            var ExecutionPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            return new DirectoryCatalog(ExecutionPath, Registration);          
+            var executionPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            return new DirectoryCatalog(executionPath, registration);          
         }
     }
 }

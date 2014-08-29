@@ -10,11 +10,11 @@ namespace Axonite.Core.World
     public class Map
     {
         //For now, just assuming a single location...
-        internal List<IHero> m_HeroList = new List<IHero>();
+        internal List<HeroState> m_HeroList = new List<HeroState>();
 
-        public ReadOnlyCollection<IHero> HeroList()
+        public ReadOnlyCollection<HeroState> HeroList()
         {
-            return new ReadOnlyCollection<IHero>(m_HeroList);
+            return new ReadOnlyCollection<HeroState>(m_HeroList);
         } 
     }
 }

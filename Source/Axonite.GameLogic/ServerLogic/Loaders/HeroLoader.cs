@@ -10,20 +10,20 @@ namespace Axonite.GameLogic.ServerLogic.Loaders
     {
         internal static IOutcome<List<IHero>> LoadHeroes(GameTypes gameType)
         {
-            var AllHeroes = HeroImporter.ImportHeroesFromAssemblies();
-            InitializeHeroState(AllHeroes);
-            var Validator = new HeroValidator(AllHeroes, gameType);
-            var ValidHeroesOutcome = Validator.GetValidHeroes();
+            var allHeroes = HeroImporter.ImportHeroesFromAssemblies();
+            InitializeHeroState(allHeroes);
+            var validator = new HeroValidator(allHeroes, gameType);
+            var validHeroesOutcome = validator.GetValidHeroes();
 
-            return ValidHeroesOutcome;
+            return validHeroesOutcome;
         }
 
         private static void InitializeHeroState(IEnumerable<IHero> heroes)
         {
-            foreach (var Hero in heroes)
+            foreach (var hero in heroes)
             {
-                HeroStateService.RegisterAndInitializeState(Hero);
-                Hero.Setup();
+                HeroStateService.RegisterAndInitializeState(hero);
+                hero.Setup();
             }
 
         }
