@@ -23,7 +23,7 @@ namespace Axonite.GameLogic.ServerLogic.Loaders
         {
             foreach (var Hero in heroes)
             {
-                HeroStateService.RegisterAndInitializeState(Hero);
+                HeroRepository.RegisterAndInitializeState(Hero);
                 Hero.Setup();
             }
 

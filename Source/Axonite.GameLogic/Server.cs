@@ -4,7 +4,7 @@ using Axonite.GameLogic.ServerLogic.Turns;
 namespace Axonite.GameLogic
 {
     /// <summary>
-    /// Entry point for starting, running, and interogating games in progress.
+    /// Entry point for starting, running, and interrogating games in progress.
     /// </summary>
     public class Server
     {                

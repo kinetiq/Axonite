@@ -1,4 +1,4 @@
-namespace Axonite.API.Evaluations
+namespace Axonite.API.Senses
 {
 
     /// <summary>

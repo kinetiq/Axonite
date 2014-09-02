@@ -52,9 +52,8 @@
     <Compile Include="Actions\PassAction.cs" />
     <Compile Include="Creation\Stats.cs" />
     <Compile Include="Evaluation.cs" />
-    <Compile Include="Evaluations\Hero.cs" />
-    <Compile Include="Evaluations\Look.cs" />
-    <Compile Include="Evaluations\ReadOnlyEntityBase.cs" />
+    <Compile Include="Senses\Hero.cs" />
+    <Compile Include="Senses\ReadOnlyEntityBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

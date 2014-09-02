@@ -1,4 +1,5 @@
 ﻿using Axonite.API.Actions;
+using Axonite.Core;
 using Axonite.Core.World;
 using Axonite.GameLogic.ServerLogic.Turns;
 using Axonite.GameLogic.ServerLogic.Warden;
@@ -13,7 +14,7 @@ namespace Axonite.GameLogic.ServerLogic
             if (Game.GameState != GameStates.GameOn)
                 throw new InvalidOperationException();
 
-            foreach (var Hero in Game.Heroes)
+            foreach (var Hero in HeroRepository.Heroes)
                 ExecuteTurn(Hero);
 
             //Check victory condititons

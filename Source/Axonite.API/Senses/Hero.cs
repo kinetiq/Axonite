@@ -1,7 +1,7 @@
 ﻿using System;
 using Axonite.Core.World;
 
-namespace Axonite.API.Evaluations
+namespace Axonite.API.Senses
 {
     /// <summary>
     /// ReadOnly hero that's safe for the API to expose. We can't expose IHero or HeroState

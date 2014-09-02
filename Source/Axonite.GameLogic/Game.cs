@@ -15,7 +15,6 @@ namespace Axonite.GameLogic
     {
         internal static GameStates GameState = GameStates.GameNotStarted;
         internal static GameTypes GameType = GameTypes.NotSet;
-        internal static List<IHero> Heroes = null;
 
         static Game()
         {

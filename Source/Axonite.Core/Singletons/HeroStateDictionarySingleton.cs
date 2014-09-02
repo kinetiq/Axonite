@@ -6,7 +6,9 @@ namespace Axonite.Core.Singletons
     internal sealed class HeroStateDictionarySingleton
     {
         static readonly HeroStateDictionarySingleton InnerInstance = new HeroStateDictionarySingleton();
+
         internal Dictionary<IHero, HeroState> HeroStateDictionary = new Dictionary<IHero, HeroState>();
+        internal List<IHero> Heroes = new List<IHero>(); 
 
         internal static HeroStateDictionarySingleton Instance
         {

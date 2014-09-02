@@ -12,13 +12,13 @@ namespace Axonite.API.Creation
     {
         public static void SetHealth(IHero hero, int value)
         {
-            var HeroState = HeroStateService.Find(hero);
+            var HeroState = HeroRepository.FindState(hero);
             HeroState.Health = value;
         }
 
         public static void SetStrength(IHero hero, int value)
         {
-            var HeroState = HeroStateService.Find(hero);
+            var HeroState = HeroRepository.FindState(hero);
             HeroState.Strength = value;
         }
     }

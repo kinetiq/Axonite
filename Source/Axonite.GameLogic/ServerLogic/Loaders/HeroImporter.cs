@@ -20,19 +20,19 @@ namespace Axonite.GameLogic.ServerLogic.Loaders
 
         public static List<IHero> ImportHeroesFromAssemblies()
         {
-            var loader = new HeroImporter();
-            return loader.ImportHeroes();
+            var Loader = new HeroImporter();
+            return Loader.ImportHeroes();
         }
 
         private List<IHero> ImportHeroes()
         {
-            var catalog = new AggregateCatalog(); //We can add multiple catalogs to this. 
+            var Catalog = new AggregateCatalog(); //We can add multiple catalogs to this. 
 
             //Rifle through all the catalogs in the exectuing folder, and pull the ones that implement our interface.
-            catalog.Catalogs.Add(GetExecutionDirectoryCatalog()); 
+            Catalog.Catalogs.Add(GetExecutionDirectoryCatalog()); 
 
-            var container = new CompositionContainer(catalog);
-            container.ComposeParts(this); //After this, Heroes will contain instances of all our StockBots!
+            var Container = new CompositionContainer(Catalog);
+            Container.ComposeParts(this); //After this, Heroes will contain instances of all our StockBots!
 
             return new List<IHero>(m_Heroes); //Copy the list.
         }
