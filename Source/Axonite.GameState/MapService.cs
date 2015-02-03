@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using Axonite.Core.Singletons;
+﻿using System.Collections.Generic;
 using Axonite.Core.World;
+using Axonite.GameState.Singletons;
 
-namespace Axonite.Core
+namespace Axonite.GameState
 {
     /// <summary>
     /// Temporary map state service. Rejigger once we have a real map. 

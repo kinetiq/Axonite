@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Axonite.Core")]
+[assembly: AssemblyTitle("Axonite.GameState")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Axonite.Core")]
-[assembly: AssemblyCopyright("Copyright ©  2014")]
+[assembly: AssemblyProduct("Axonite.GameState")]
+[assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("cac2cbf4-9d6f-4689-92e5-e2195c59e065")]
+[assembly: Guid("d7568bfe-96be-4f43-a303-a9d6da241680")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -35,5 +35,6 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
-// Internals are visible to GameState, that way we can hide things from the hero libraries.
-[assembly: InternalsVisibleTo("Axonite.GameState")]
+// Internals are visible to GameLogic and API, that way we can hide things from the hero libraries.
+[assembly: InternalsVisibleTo("Axonite.GameLogic")]
+[assembly: InternalsVisibleTo("Axonite.API")]

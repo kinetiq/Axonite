@@ -26,9 +26,7 @@ namespace Axonite.GameLogic.ServerLogic
                 //Show messages?
             }
 
-            Game.Heroes = LoadOutcome.Value;
-      
-
+        
             //Arrange the game map
             //Arrange the heroes in space
 

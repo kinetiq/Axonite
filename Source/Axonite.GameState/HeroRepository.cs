@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Dynamic;
-using Axonite.Core.Singletons;
 using Axonite.Core.World;
+using Axonite.GameState.Singletons;
 
-namespace Axonite.Core
+namespace Axonite.GameState
 {
     /// <summary>
-    /// Heroes need to be truly unaware of their state (as well as the state of other heroes) and unable to directly alter it, to prevent cheating. 
+    /// Heroes need to be truly unaware of their own state (as well as the state of other heroes) and unable to directly alter it, to prevent cheating. 
     /// But API and GameLogic both need access. We achieved this by putting this internal repository here. GameLogic and API are both declared 
     /// CanSeeInternals, so they basically have Public access, while Hero DLLs don't see it at all.
     /// </summary>

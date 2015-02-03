@@ -1,7 +1,6 @@
-﻿using System.Collections.Generic;
-using Axonite.Core.World;
+﻿using Axonite.Core.World;
 
-namespace Axonite.Core.Singletons
+namespace Axonite.GameState.Singletons
 {
     internal sealed class GameMapSingleton
     {

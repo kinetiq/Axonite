@@ -77,6 +77,10 @@
       <Project>{dd3370cf-27bf-45b9-ae5c-f5636ee6eee2}</Project>
       <Name>Axonite.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Axonite.GameState\Axonite.GameState.csproj">
+      <Project>{82498b9b-53ea-43ce-accf-35c9a23a1e19}</Project>
+      <Name>Axonite.GameState</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

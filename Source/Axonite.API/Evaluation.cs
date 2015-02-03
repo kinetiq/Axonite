@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Axonite.API.Senses;
 using Axonite.Core;
 using Axonite.Core.World;
+using Axonite.GameState;
 
 namespace Axonite.API
 {
